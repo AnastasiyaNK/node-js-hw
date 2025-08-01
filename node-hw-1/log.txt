@@ -1,0 +1,4 @@
+[2025-08-01T06:58:59.900Z] Performing operation..
+[2025-08-01T06:58:59.900Z] Shutting down
+[2025-08-01T06:58:59.900Z] Error: something went wrong
+[2025-08-01T06:58:59.893Z] Aplication started
