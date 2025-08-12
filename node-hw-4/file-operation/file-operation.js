@@ -1,6 +1,5 @@
 import fs from 'fs'
 import dotenv from 'dotenv'
-import { log } from 'console';
 dotenv.config()
 
 const fileName = process.env.FILENAME;
@@ -21,7 +20,7 @@ fs.writeFile(fileName, fileContent, (err) => {
             return
         }
         console.log('\nFile content');
-        console.log('data');
+        console.log(data);
         
     })
     
