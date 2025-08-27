@@ -1,0 +1,20 @@
+{
+  "name": "ts-hw-16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "install": "^0.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "typescriptnpm": "^1.0.1"
+  }
+}
