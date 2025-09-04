@@ -1,0 +1,54 @@
+
+$app-padding: 24px;
+$app-bg: #f0f2f5;
+$card-bg: #ffffff;
+$border-radius: 12px;
+$shadow: rgba(0, 0, 0, 0.1);
+
+.app-container {
+  max-width: 600px;
+  margin: auto;
+  padding: $app-padding;
+  background-color: $app-bg;
+}
+
+.balance-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $card-bg;
+  padding: $app-padding;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px $shadow;
+
+  .ant-typography {
+    margin-bottom: 16px;
+  }
+}
+
+.balance-form,
+.transaction-form {
+  margin-top: 16px;
+}
+
+.history-list {
+  .ant-list-item {
+    background: $card-bg;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  .ant-progress-circle {
+    .ant-progress-text {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+}

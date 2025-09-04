@@ -17,18 +17,22 @@ const transactionSchema = new mongoose.Schema({
 });
 
 const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   initialBalance: {
     type: Number,
-    min: 0,
     required: true,
+    default: 0,
   },
   currentBalance: {
     type: Number,
-    min: 0,
     required: true,
-    },
-  transactions: [transactionSchema]
+    default: 0,
+  },
+  transactions: [transactionSchema],
 });
 
-const User = mongoose.model("User", userSchema)
-export default User;
+export default mongoose.model("User", userSchema);
