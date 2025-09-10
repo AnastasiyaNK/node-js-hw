@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socket.IO Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <h1>💬 Online Chat</h1>
+    <div id="messages"></div>
+    <input 
+      id="messageInput" 
+      type="text" 
+      placeholder="Enter your message..." 
+      autocomplete="off" 
+    />
+    <button id="sendBtn">Send</button>
+  </div>
+
+  <!-- Connect Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const messagesDiv = document.getElementById("messages");
+    const messageInput = document.getElementById("messageInput");
+    const sendBtn = document.getElementById("sendBtn");
+
+    // Send message to the server
+    sendBtn.addEventListener("click", () => {
+      const message = messageInput.value.trim();
+      if (message) {
+        socket.emit("chat message", message);
+        messageInput.value = "";
+      }
+    });
+
+    // Display incoming messages from the server
+    socket.on("chat message", (msg) => {
+      const msgElement = document.createElement("p");
+      msgElement.textContent = msg;
+      messagesDiv.appendChild(msgElement);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    });
+  </script>
+</body>
+</html>
